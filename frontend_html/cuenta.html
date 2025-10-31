@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta | La Joya</title>
+    <link rel="stylesheet" href="cuenta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">La Joya</h1>
+        <nav class="small-nav">
+            <ul>
+                <li><a href="index.html" class="nav-item-small">INICIO</a></li>
+                <li><a href="cart.html" class="nav-item-small">CARRITO</a></li>
+                <li><a href="about.html" class="nav-item-small">SOBRE NOSOTROS</a></li>
+                <li class="login-item"><a href="#" class="btn-login active-user-logged">
+                    <span class="icon-user">👤</span> Mi Cuenta
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="account-container">
+        
+        <aside class="account-sidebar">
+            <h2>Hola, Ana</h2>
+            <nav>
+                <ul>
+                    <li><a href="#perfil" class="sidebar-link active" data-view="profile">Mi Perfil</a></li>
+                    <li><a href="#pedidos" class="sidebar-link" data-view="orders">Historial de Pedidos</a></li>
+                    <li><a href="#" class="sidebar-link">Direcciones de Recolección</a></li>
+                    <li><a href="#" class="sidebar-link logout">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="account-content">
+            
+            <div id="profile" class="content-view active">
+                <h2>Mi Perfil</h2>
+                <form class="profile-form">
+                    <div class="input-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" value="Ana López" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" value="ana.lopez@correo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" value="55-1234-5678">
+                    </div>
+                    
+                    <h3>Cambiar Contraseña</h3>
+                    <div class="input-group">
+                        <label for="current-password">Contraseña Actual</label>
+                        <input type="password" id="current-password">
+                    </div>
+                    <div class="input-group">
+                        <label for="new-password">Nueva Contraseña</label>
+                        <input type="password" id="new-password">
+                    </div>
+
+                    <button type="submit" class="save-btn">GUARDAR CAMBIOS</button>
+                </form>
+            </div>
+
+            <div id="orders" class="content-view hidden">
+                <h2>Historial de Pedidos</h2>
+                
+                <div class="order-history-table">
+                    
+                    <div class="order-row header">
+                        <span># Pedido</span>
+                        <span>Fecha</span>
+                        <span>Total</span>
+                        <span>Estado</span>
+                        <span>Acciones</span>
+                    </div>
+                    
+                    <div class="order-row item">
+                        <span data-label="# Pedido">#LJ-1901</span>
+                        <span data-label="Fecha">15/09/2025</span>
+                        <span data-label="Total">$130.00</span>
+                        <span data-label="Estado" class="status completed">Recogido</span>
+                        <span data-label="Acciones"><button class="detail-btn">Ver Detalles</button></span>
+                    </div>
+
+                    <div class="order-row item">
+                        <span data-label="# Pedido">#LJ-1895</span>
+                        <span data-label="Fecha">01/09/2025</span>
+                        <span data-label="Total">$80.00</span>
+                        <span data-label="Estado" class="status pending">Pendiente</span>
+                        <span data-label="Acciones"><button class="detail-btn">Ver Detalles</button></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 1. Limpiar activos del sidebar
+                document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // 2. Ocultar todas las vistas de contenido
+                document.querySelectorAll('.content-view').forEach(view => view.classList.remove('active'));
+                document.querySelectorAll('.content-view').forEach(view => view.classList.add('hidden'));
+
+                // 3. Mostrar la vista seleccionada
+                const viewId = this.getAttribute('data-view');
+                if (viewId) {
+                    const targetView = document.getElementById(viewId);
+                    targetView.classList.remove('hidden');
+                    targetView.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* index.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    color: #333;
+}
+
+.hero-header {
+    height: 200px;
+    background-image: url('conchas-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-header::before {
+    /* Overlay semi-transparente oscuro para que el texto resalte */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); 
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: yellow;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10; /* Asegura que el logo esté sobre el overlay */
+    position: absolute;
+}
+
+.main-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav li {
+    flex-grow: 0;
+}
+
+.nav-item {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    background-color: #e6e6e6;
+    margin-right: 2px;
+}
+
+.icon-item {
+    margin-left: auto;
+}
+.main-nav ul :nth-last-child(2) {
+    margin-left: auto; /* Solo el primer icono (usuario) se va a la derecha */
+}
+.icon-item a {
+    display: block;
+    padding: 15px 15px;
+    background-color: #e6e6e6;
+    margin-left: 2px;
+}
+.icon-img {
+    width: 20px;
+    height: 20px;
+    /* Para el ejemplo, estos iconos serán cuadrados grises de marcador de posición */
+    background-color: #555;
+    -webkit-mask: url(icon.svg) no-repeat center;
+    mask: url(icon.svg) no-repeat center;
+}
+/* Simulación de íconos (ajustar con íconos reales) */
+.icon-item a:nth-child(1) .icon-img { background-color: #555; }
+
+.filter-bar {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-btn {
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #e6e6e6; 
+    cursor: pointer;
+}
+.filter-btn .icon-img {
+    width: 20px;
+    height: 20px;
+}
+/* Simulación del icono de filtro */
+.filter-btn .icon-img { background-color: #555; }
+
+
+.price-range {
+    padding: 10px 20px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* 4. Grid de Productos */
+.product-grid {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 120px; /* Altura de la imagen en la tarjeta */
+    background-size: cover;
+    background-position: center;
+    /* Usar un color de fondo para marcadores de posición */
+    background-color: #ccc; 
+    
+}
+
+.product-info {
+    padding: 8px;
+}
+
+.product-info .name {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Evita que el nombre del producto se rompa */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos si se desborda */
+}
+
+.product-info .price {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.login-item {
+    margin-left: 700px;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    border: 2px solid #0056b3;
+    box-shadow: 0 2px 0 #0056b3;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+/* --- ESTILOS DE INTERACTIVIDAD AÑADIDOS --- */
+
+/* 1. Estilos para el menú fijo (JavaScript) */
+.sticky {
+    position: fixed; /* Fija el elemento en la ventana */
+    top: 0;          /* Lo coloca en la parte superior */
+    width: 100%;     /* Ocupa todo el ancho */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    background-color: white; /* O el color de fondo de tu menú */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* 2. Estilos para los enlaces de las tarjetas (a href) */
+.product-grid a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit;        /* Mantiene el color de texto normal */
+}
+
+.product-card:hover {
+    /* Efecto al pasar el ratón para indicar que es clickable */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    transform: translateY(-2px); /* Mueve la tarjeta ligeramente hacia arriba */
+    transition: all 0.3s ease; /* Transición suave del efecto */
+}
+
+
+/* Media Query Básico (para adaptabilidad en pantallas más pequeñas) */
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    .main-nav li {
+        width: 100%; /* Las opciones de navegación se apilan */
+        margin-bottom: 2px;
+    }
+    .icon-item {
+        width: auto;
+        margin-left: 0;
+    }
+    .main-nav ul :nth-last-child(2) {
+        margin-left: auto;
+    }
+
+    /* detalle_producto.css */
+
+/* Clase para fijar el menú, aplica al .top-bar */
+.sticky {
+    position: fixed; /* Lo fija */
+    top: 0;          /* Lo pone arriba */
+    width: 100%;     /* Cubre todo el ancho */
+    z-index: 1000;   /* Mantiene encima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout (Paso 1)</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">La Joya</h1>
+        <nav class="small-nav">
+            <ul>
+                <li><a href="index.html" class="nav-item-small">INICIO</a></li>
+                <li><a href="cart.html" class="nav-item-small">CARRITO</a></li>
+                <li><a href="about.html" class="nav-item-small">SOBRE NOSOTROS</a></li>
+                <li class="login-item"><a href="login.html" class="btn-login">
+                    <span class="icon-user">👤</span> INICIAR SESION
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        
+        <div class="progress-bar">
+            <span class="step completed">1. Envío</span>
+            <span class="connector completed-line"></span>
+            <span class="step completed">2. Pago</span>
+            <span class="connector completed-line"></span>
+            <span class="step active">3. Confirmar</span>
+        </div>
+
+        <div class="checkout-content">
+            <section class="review-section">
+                <h2>3. Revisa y Confirma</h2>
+                
+                <div class="review-box">
+                    <h3>Dirección de Envío</h3>
+                    <p class="review-data">**Método:** Envío a Domicilio ($50.00)</p>
+                    <p class="review-data">**Destinatario:** Juan Pérez</p>
+                    <p class="review-data">**Dirección:** Calle de la Panadería 123, Ciudad de México, 06100</p>
+                    <a href="checkout-step1.html" class="edit-link">Editar</a>
+                </div>
+
+                <div class="review-box">
+                    <h3>Método de Pago</h3>
+                    <p class="review-data">**PayPal**</p>
+                    <p class="review-data">**Titular:** Juan Pérez</p>
+                    <a href="checkout-step2.html" class="edit-link">Editar</a>
+                </div>
+
+                <div class="terms-check">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a>.</label>
+                </div>
+
+            </section>
+
+            <aside class="summary-aside final-summary">
+                <h3>Resumen Final</h3>
+                <div class="summary-item">
+                    <span>Muffin (x4)</span>
+                    <span>$60</span>
+                </div>
+                <div class="summary-item">
+                    <span>Cuernito (x2)</span>
+                    <span>$20</span>
+                </div>
+                <div class="summary-line subtotal">
+                    <span>Subtotal</span>
+                    <span>$80</span>
+                </div>
+                <div class="summary-line shipping-cost">
+                    <span>Costo de Envío</span>
+                    <span>$50</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total a Pagar</span>
+                    <span>$130</span>
+                </div>
+            </aside>
+        </div>
+        
+        <div class="checkout-footer-nav">
+            <a href="checkout_step2.html" class="back-link">← Volver a Pago</a>
+            <button class="next-step-btn final-confirm">CONFIRMAR Y PAGAR $130</button>
+        </div>
+        
+    </main>
+</body>
+</html>

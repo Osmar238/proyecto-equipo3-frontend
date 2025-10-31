@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout (Paso 2)</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">La Joya</h1>
+        <nav class="small-nav">
+            <ul>
+                <li><a href="index.html" class="nav-item-small">INICIO</a></li>
+                <li><a href="cart.html" class="nav-item-small">CARRITO</a></li>
+                <li><a href="about.html" class="nav-item-small">SOBRE NOSOTROS</a></li>
+                <li class="login-item"><a href="login.html" class="btn-login">
+                    <span class="icon-user">👤</span> INICIAR SESION
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        
+        <div class="progress-bar">
+            <span class="step completed">1. Recolección</span>
+            <span class="connector completed-line"></span>
+            <span class="step active">2. Pago</span>
+            <span class="connector"></span>
+            <span class="step">3. Ticket</span>
+        </div>
+
+        <div class="checkout-content">
+            <section class="payment-section">
+                <h2>2. Método de Pago</h2>
+                
+                <div class="payment-options solo-paypal">
+                    <label class="option-card active only-option">
+                        <input type="radio" name="payment" checked disabled>
+                        <span class="paypal-logo">P a y P a l</span>
+                        <p class="help-text">Serás redirigido a PayPal para completar tu pago de forma segura.</p>
+                    </label>
+                </div>
+
+                <div class="external-payment-info">
+                    <p>Al continuar, se abrirá una ventana de PayPal para ingresar tus datos y realizar el pago. Tu pedido se confirmará al finalizar la transacción en el sitio de PayPal.</p>
+                </div>
+            </section>
+
+            <aside class="summary-aside">
+                <h3>Tu Pedido</h3>
+                <div class="summary-item">
+                    <span>Muffin (x4)</span>
+                    <span>$60</span>
+                </div>
+                <div class="summary-item">
+                    <span>Cuernito (x2)</span>
+                    <span>$20</span>
+                </div>
+                <div class="summary-line subtotal">
+                    <span>Subtotal</span>
+                    <span>$80</span>
+                </div>
+                <div class="summary-line shipping-cost">
+                    <span>Costo de Recolección</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span>$80</span>
+                </div>
+            </aside>
+        </div>
+        
+        <div class="checkout-footer-nav">
+            <a href="checkout_step1.html" class="back-link">← Volver a Recolección</a>
+            <a href="checkout_step3.html" class="next-step-btn">REVISAR Y CONFIRMAR PEDIDO →</a>
+        </div>
+        
+    </main>
+</body>
+</html>

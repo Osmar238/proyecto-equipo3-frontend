@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout (Paso 1)</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">La Joya</h1>
+        <nav class="small-nav">
+            <ul>
+                <li><a href="index.html" class="nav-item-small">INICIO</a></li>
+                <li><a href="cart.html" class="nav-item-small">CARRITO</a></li>
+                <li><a href="about.html" class="nav-item-small">SOBRE NOSOTROS</a></li>
+                <li class="login-item"><a href="login.html" class="btn-login">
+                    <span class="icon-user">👤</span> INICIAR SESION
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        
+        <div class="progress-bar">
+            <span class="step active">1. Recolección</span>
+            <span class="connector"></span>
+            <span class="step">2. Pago</span>
+            <span class="connector"></span>
+            <span class="step">3. Ticket</span>
+        </div>
+
+        <div class="checkout-content">
+            <section class="shipping-section">
+                <h2>1. ¿Cuándo Recogerás tu Pedido? 🕐</h2>
+                
+                <div class="shipping-options">
+                    <div class="option-card active fixed-option only-option">
+                        🚶 **Recoger en Tienda**
+                        <p class="costo">Gratis. Pedido pagado en línea.</p>
+                        <p class="help-text">Tu panadería favorita, lista para ti. Solo recolecta tu pedido.</p>
+                    </div>
+                </div>
+
+                <form class="address-form">
+                    <h3>Detalles de Recolección</h3>
+                    <div class="input-group">
+                        <label for="nombre">Nombre Completo de quien Recoge</label>
+                        <input type="text" id="nombre" placeholder="Ej: Ana López" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="hora">Hora Estimada de Recolección (Hoy)</label>
+                        <input type="time" id="hora" value="10:00" required>
+                        <p class="help-text">Pedidos listos 30 minutos después de la hora de confirmación.</p>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="summary-aside">
+                <h3>Tu Pedido</h3>
+                <div class="summary-item">
+                    <span>Muffin (x4)</span>
+                    <span>$60</span>
+                </div>
+                <div class="summary-item">
+                    <span>Cuernito (x2)</span>
+                    <span>$20</span>
+                </div>
+                <div class="summary-line subtotal">
+                    <span>Subtotal</span>
+                    <span>$80</span>
+                </div>
+                <div class="summary-line shipping-cost">
+                    <span>Costo de Recolección</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span>$80</span>
+                </div>
+            </aside>
+        </div>
+        
+        <div class="checkout-footer-nav">
+            <a href="cart.html" class="back-link">← Volver al carrito</a>
+            <a href="checkout_step2.html" class="next-step-btn">IR A MÉTODO DE PAGO →</a>
+        </div>
+        
+    </main>
+</body>
+</html>

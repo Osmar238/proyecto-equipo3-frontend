@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concha de Chocolate y Vainilla | La Joya</title>
+    <link rel="stylesheet" href="detalle_producto_copy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">La Joya</h1>
+        <nav class="small-nav">
+            <ul>
+                <li><a href="frontend_html/" class="nav-item-small">INICIO</a></li>
+                <li><a href="cart.html" class="nav-item-small">CARRITO</a></li>
+                <li><a href="about.html" class="nav-item-small">SOBRE NOSOTROS</a></li>
+                <li class="login-item"><a href="login.html" class="btn-login">
+                    <span class="icon-user">👤</span> INICIAR SESION
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Inicio</a> &gt; <a href="#">Pan Dulce</a> &gt; Concha de Chocolate y Vainilla
+    </div>
+
+    <main class="product-container">
+        
+        <div class="product-gallery">
+            <img src="conchas.jpg" alt="Concha de Chocolate y Vainilla, vista principal" class="main-image">
+        </div>
+
+        <div class="product-details">
+            <h1 class="product-title">Concha de Chocolate y Vainilla</h1>
+            <p class="product-price">$15.00 MXN</p>
+            
+            <div class="rating">
+                ★★★★★ (45 Reseñas)
+            </div>
+
+            <p class="description">
+                Nuestra concha clásica con un toque moderno. Suave y esponjosa masa de vainilla coronada con un crujiente topping bicolor de chocolate y vainilla. Perfecta para acompañar tu café matutino.
+            </p>
+
+            <div class="ingredients-list">
+                <h3>Ingredientes Clave:</h3>
+                <ul>
+                    <li>Harina de trigo de alta calidad</li>
+                    <li>Mantequilla de rancho</li>
+                    <li>Cacao puro mexicano</li>
+                    <li>Extracto natural de vainilla</li>
+                </ul>
+            </div>
+
+            <div class="purchase-controls">
+                
+                <div class="quantity-picker">
+                    <label for="qty">Cantidad:</label>
+                    <div class="qty-control-box">
+                        <button class="qty-btn-minus">-</button>
+                        <input type="number" id="qty" value="1" min="1" class="qty-input">
+                        <button class="qty-btn-plus">+</button>
+                    </div>
+                </div>
+
+                <button class="add-to-cart-btn">
+                    <span class="icon-cart">🛒</span> AÑADIR AL CARRITO
+                </button>
+            </div>
+            
+            <div class="availability">
+                <p>🟢 En stock. ¡Recibe hoy o recoge en tienda!</p>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="review-section">
+        <h2>Reseñas de Clientes</h2>
+        <div class="review-item">
+            <p class="review-text">"La mejor concha que he probado, el chocolate no es muy dulce. ¡Deliciosa!"</p>
+            <p class="reviewer">- Ana L.</p>
+        </div>
+        <div class="review-item">
+            <p class="review-text">"Llegó fresca y el tamaño es perfecto. 5 estrellas."</p>
+            <p class="reviewer">- Carlos M.</p>
+        </div>
+        <button class="load-more-btn">Ver todas las reseñas</button>
+    </section>
+
+</body>
+</html>

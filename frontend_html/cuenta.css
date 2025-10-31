@@ -1,0 +1,273 @@
+/* --- ESTILOS COMPARTIDOS (Top Bar) --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.top-bar {
+    /* ... (Mismo estilo que en archivos anteriores) ... */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+/* Reutilizar estilos de botones de navegación */
+.logo-small, .nav-item-small { 
+    /* ... (Estilos abreviados para consistencia) ... */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.active-user-logged {
+    background-color: #f0c3c3; /* Color rosa del botón de checkout para indicar usuario logueado */
+    color: #000;
+    border: 2px solid #d9534f;
+}
+
+/* --- LAYOUT PRINCIPAL DE LA CUENTA (Sidebar + Contenido) --- */
+.account-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex; /* Para las dos columnas */
+    gap: 30px;
+}
+
+/* 1. SIDEBAR DE NAVEGACIÓN */
+.account-sidebar {
+    flex-shrink: 0; /* Evita que el sidebar se achique */
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.account-sidebar h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.account-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.sidebar-link:hover {
+    color: #000;
+    background-color: #f9f9f9;
+}
+
+.sidebar-link.active {
+    color: #d9534f; /* Color de énfasis de La Joya */
+    border-left: 4px solid #d9534f;
+    padding-left: 16px;
+    background-color: #fff0f0;
+}
+.sidebar-link.logout {
+    color: #cc3333;
+    margin-top: 30px;
+}
+
+/* 2. ÁREA DE CONTENIDO */
+.account-content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.content-view h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Control de vistas (simulado con JavaScript) */
+.content-view.hidden {
+    display: none;
+}
+
+/* --- ESTILOS DE LA VISTA 'MI PERFIL' --- */
+.profile-form .input-group {
+    margin-bottom: 15px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e6e6e6; /* Fondo gris de campos */
+    box-sizing: border-box;
+}
+
+.profile-form h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.save-btn {
+    padding: 12px 30px;
+    background-color: #007bff; /* Azul para la acción principal */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+/* --- ESTILOS DE LA VISTA 'HISTORIAL DE PEDIDOS' --- */
+
+.order-history-table {
+    display: grid;
+    /* 5 columnas de tamaño flexible para desktop */
+    grid-template-columns: 0.5fr 1fr 0.7fr 1fr 1fr; 
+    gap: 10px;
+}
+
+.order-row {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: contents; /* Permite que los hijos sigan el grid */
+}
+
+.order-row.header {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    padding: 15px 12px;
+    border-bottom: 2px solid #ddd;
+    /* Hace que los encabezados se comporten como una fila de grid */
+    display: grid;
+    grid-template-columns: inherit; 
+}
+
+.order-row.item span {
+    align-self: center; /* Centra verticalmente */
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.status.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.detail-btn {
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsividad para la tabla en móvil (oculta las etiquetas de la columna) */
+@media (max-width: 768px) {
+    .account-container {
+        flex-direction: column;
+    }
+    
+    .account-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .account-sidebar nav ul {
+        display: flex; /* Menú horizontal en móvil */
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .account-sidebar .sidebar-link {
+        flex: 1 1 auto;
+        border-left: none;
+        border-bottom: 2px solid #f0f0f0;
+        text-align: center;
+        padding-left: 10px;
+    }
+    
+    .sidebar-link.active {
+        border-left: none;
+        border-bottom: 2px solid #d9534f; /* Borde inferior para activo */
+        padding-left: 10px;
+    }
+    
+    /* Configuración de la tabla para móvil (apilamiento) */
+    .order-history-table {
+        display: block; /* Desactiva el grid para apilar */
+    }
+    
+    .order-row.header {
+        display: none; /* Oculta los encabezados de la tabla en móvil */
+    }
+
+    .order-row.item {
+        display: block;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .order-row.item span {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        position: relative;
+        padding-left: 100px; /* Espacio para la etiqueta */
+    }
+
+    .order-row.item span:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        color: #777;
+    }
+
+    .order-row.item .status {
+        margin: 5px 0 0 auto;
+    }
+}
