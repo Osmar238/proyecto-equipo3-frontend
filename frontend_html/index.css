@@ -70,52 +70,6 @@ body {
     margin-right: 2px;
 }
 
-.icon-item {
-    margin-left: auto;
-}
-.main-nav ul :nth-last-child(2) {
-    margin-left: auto; /* Solo el primer icono (usuario) se va a la derecha */
-}
-.icon-item a {
-    display: block;
-    padding: 15px 15px;
-    background-color: #e6e6e6;
-    margin-left: 2px;
-}
-.icon-img {
-    width: 20px;
-    height: 20px;
-    /* Para el ejemplo, estos iconos serán cuadrados grises de marcador de posición */
-    background-color: #555;
-    -webkit-mask: url(icon.svg) no-repeat center;
-    mask: url(icon.svg) no-repeat center;
-}
-/* Simulación de íconos (ajustar con íconos reales) */
-.icon-item a:nth-child(1) .icon-img { background-color: #555; }
-
-.filter-bar {
-    max-width: 1200px;
-    margin: 15px auto;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-}
-
-.filter-btn {
-    border: none;
-    padding: 10px 15px;
-    margin-right: 10px;
-    background-color: #e6e6e6; 
-    cursor: pointer;
-}
-.filter-btn .icon-img {
-    width: 20px;
-    height: 20px;
-}
-/* Simulación del icono de filtro */
-.filter-btn .icon-img { background-color: #555; }
-
-
 .price-range {
     padding: 10px 20px;
     background-color: #e6e6e6;
@@ -173,9 +127,8 @@ body {
 }
 
 .login-item {
-    margin-left: 700px;
+    margin-left: auto;
 }
-
 .btn-login {
     display: flex;
     align-items: center;
@@ -216,6 +169,72 @@ body {
     transition: all 0.3s ease; /* Transición suave del efecto */
 }
 
+*/
+.product-card {
+    cursor: pointer;
+}
+
+/* 2. Oculta el selector de cantidad por defecto */
+.quantity-selector {
+    display: none;
+    padding: 10px 8px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+/* 3. Clase 'visible' que JavaScript usará para MOSTRAR el selector */
+.quantity-selector.visible {
+    display: block;
+}
+
+.quantity-selector label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.qty-controls-index {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 4. Estilos para el input de número */
+.qty-input-index {
+    width: 60px; /* Un poco más de espacio */
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Evita que aparezcan las flechas por defecto del input number */
+    -moz-appearance: textfield;
+}
+
+.qty-input-index::-webkit-outer-spin-button,
+.qty-input-index::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 5. Estilos para el botón "Agregar" */
+.btn-add-index {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    margin-left: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Mismo azul que el login */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add-index:hover {
+    background-color: #0056b3;
+}
 
 /* Media Query Básico (para adaptabilidad en pantallas más pequeñas) */
 @media (max-width: 1000px) {
@@ -253,4 +272,95 @@ body {
     z-index: 1000;   /* Mantiene encima */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+} /* <-- ¡AQUÍ ESTÁ EL ARREGLO! LA LLAVE DE CIERRE DEL @media (max-width: 600px) VA AQUÍ */
+
+
+/* --- ESTILOS PARA AVISO Y FOOTER --- */
+/* (Ahora estos estilos están FUERA del media query y se aplicarán en TODOS los tamaños de pantalla) */
+
+/* Estilo para el aviso de "Recoger en Tienda".
+  Usa un fondo crema para que resalte sutilmente.
+*/
+.aviso-recogida {
+    background-color: #fff8e1; /* Un amarillo pálido/crema */
+    color: #795548;           /* Un color café oscuro para el texto */
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd; /* Borde sutil, como en tu nav */
+}
+
+.aviso-recogida p {
+    margin: 0; /* Quitamos el margen por defecto del párrafo */
+    font-weight: 500;
+}
+
+/* Estilo para el Footer (pie de página).
+  Usa el mismo gris de fondo que la barra de filtros.
+*/
+footer {
+    background-color: #e6e6e6; /* Mismo color que .filter-bar */
+    color: #555;             /* Mismo color de texto que .filter-bar */
+    text-align: center;
+    padding: 25px 15px;      /* Un poco más de espacio vertical */
+    margin-top: 30px;        /* Separación de la cuadrícula de productos */
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 5px 0;    /* Espacio ligero entre las líneas */
+    font-size: 0.9em; /* Texto un poco más pequeño */
+}
+
+/* --- Estilo Global para Logos con Enlace --- */
+
+/* Quita el subrayado y da el color del texto del h1 */
+.logo a, .logo-small a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Hereda el color del padre (h1) */
+}
+
+/* --- Estilos Globales de Autenticación --- */
+.welcome-link {
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Se alinea bien con el botón */
+}
+/* Texto de saludo (¡Hola, Osmar!) */
+.welcome-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Estilo para el botón "Cerrar Sesión".
+  Queremos que se vea como los otros botones (INICIO, CARRITO)
+  de las barras pequeñas.
+*/
+#logout-button {
+    display: inline-block; /* Asegura que se alinee con el saludo */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d9534f; /* Rojo de "salir" */
+    border: 1px solid #d43f3a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1; /* Ajuste para centrado vertical */
+}
+
+#logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* En el index.html, los botones de nav son diferentes.
+  Ajustamos el saludo para que se alinee con el botón "Cerrar Sesión".
+*/
+.main-nav .welcome-text {
+    vertical-align: middle;
+}
+.main-nav #logout-button {
+    vertical-align: middle;
 }

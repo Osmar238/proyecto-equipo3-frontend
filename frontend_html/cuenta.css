@@ -202,6 +202,59 @@ body {
     cursor: pointer;
 }
 
+/* --- Estilo Global para Logos con Enlace --- */
+
+/* Quita el subrayado y da el color del texto del h1 */
+.logo a, .logo-small a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Hereda el color del padre (h1) */
+}
+
+/* --- Estilos Globales de Autenticación --- */
+.welcome-link {
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Se alinea bien con el botón */
+}
+/* Texto de saludo (¡Hola, Osmar!) */
+.welcome-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Estilo para el botón "Cerrar Sesión".
+  Queremos que se vea como los otros botones (INICIO, CARRITO)
+  de las barras pequeñas.
+*/
+#logout-button {
+    display: inline-block; /* Asegura que se alinee con el saludo */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d9534f; /* Rojo de "salir" */
+    border: 1px solid #d43f3a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1; /* Ajuste para centrado vertical */
+}
+
+#logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* En el index.html, los botones de nav son diferentes.
+  Ajustamos el saludo para que se alinee con el botón "Cerrar Sesión".
+*/
+.main-nav .welcome-text {
+    vertical-align: middle;
+}
+.main-nav #logout-button {
+    vertical-align: middle;
+}
+
 /* Responsividad para la tabla en móvil (oculta las etiquetas de la columna) */
 @media (max-width: 768px) {
     .account-container {

@@ -9,133 +9,187 @@
 </head>
 <body>
 
-    <header class="hero-header">
-        <h1 class="logo">La Joya</h1>
-        </header>
+   <header class="hero-header">
+        <h1 class="logo">
+            <a href="index.html">La Joya</a>
+        </h1>
+    </header>
 
     <nav class="main-nav">
         <ul>
             <li><a href="index.html" class="nav-item">INICIO</a></li>
-            <li><a href="cart.html" class="nav-item">CARRITO</a></li>
-            <li><a href="about.html" class="nav-item">SOBRE NOSOTROS</a></li>
+            <li><a href="cart.html" class="nav-item">CARRITO <span id="cart-counter"></span></a></li>
             <li class="login-item"><a href="login.html" class="btn-login">
                 <span class="icon-user">👤</span> INICIAR SESION
             </a></li>
-            <li class="icon-item"><a href="#"><img src="user-icon.svg" alt="Usuario" class="icon-img"></a></li>
-            <li class="icon-item"><a href="#"><img src="search-icon.svg" alt="Buscar" class="icon-img"></a></li>
         </ul>
     </nav>
 
-    <div class="filter-bar">
-        <button class="filter-btn">
-            <img src="filter-icon.svg" alt="Filtro" class="icon-img">
-        </button>
-        <div class="price-range">RANGO DE PRECIO</div>
+    <div class="aviso-recogida">
+        <p><strong>¡Aviso Importante!</strong> Todos nuestros pedidos son para <strong>recoger en tienda</strong>. Actualmente no contamos con servicio a domicilio.</p>
     </div>
 
     <main class="product-grid">
         
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(conchas.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">CONCHA DE CHOCOLATE Y VAINILLA</p>
-                    <p class="price">$15</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(conchas.jpg);"></div>
+            <div class="product-info">
+                <p class="name">CONCHA DE CHOCOLATE Y VAINILLA</p>
+                <p class="price">$15</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(puerquito.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">PUERQUITO</p>
-                    <p class="price">$10</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(puerquito.jpg);"></div>
+            <div class="product-info">
+                <p class="name">PUERQUITO</p>
+                <p class="price">$10</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
         
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(orejas.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">OREJAS</p>
-                    <p class="price">$15</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(orejas.jpg);"></div>
+            <div class="product-info">
+                <p class="name">OREJAS</p>
+                <p class="price">$15</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(muffin.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">MUFFIN</p>
-                    <p class="price">$10</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(muffin.jpg);"></div>
+            <div class="product-info">
+                <p class="name">MUFFIN</p>
+                <p class="price">$10</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(bisquet.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">BISQUET</p>
-                    <p class="price">$20</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(bisquet.jpg);"></div>
+            <div class="product-info">
+                <p class="name">BISQUET</p>
+                <p class="price">$20</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
         
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(pan-rellena.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">PAN DE CONCHA RELLENA</p>
-                    <p class="price">$15</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(pan-rellena.jpg);"></div>
+            <div class="product-info">
+                <p class="name">PAN DE CONCHA RELLENA</p>
+                <p class="price">$15</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(dona-azucar.jpg);"></div>
+            <div class="product-info">
+                <p class="name">DONA DE AZÚCAR</p>
+                <p class="price">$10</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
+                </div>
+            </div>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(dona-azucar.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">DONA DE AZÚCAR</p>
-                    <p class="price">$10</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(cuernito.jpg);"></div>
+            <div class="product-info">
+                <p class="name">CUERNITO</p>
+                <p class="price">$10</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(cuernito.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">CUERNITO</p>
-                    <p class="price">$10</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(dona-chocolate.jpg);"></div>
+            <div class="product-info">
+                <p class="name">DONA DE CHOCOLATE</p>
+                <p class="price">$20</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
+        </div>
 
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(dona-chocolate.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">DONA DE CHOCOLATE</p>
-                    <p class="price">$20</p>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url(berlinas.jpg);"></div>
+            <div class="product-info">
+                <p class="name">BERLINAS</p>
+                <p class="price">$20</p>
+            </div>
+            <div class="quantity-selector">
+                <label>Elige la cantidad:</label>
+                <div class="qty-controls-index">
+                    <input type="number" value="1" min="1" class="qty-input-index">
+                    <button class="btn-add-index">Agregar</button>
                 </div>
             </div>
-        </a>
-
-        <a href="detalle_producto.html">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url(berlinas.jpg);"></div>
-                <div class="product-info">
-                    <p class="name">BERLINAS</p>
-                    <p class="price">$20</p>
-                </div>
-            </div>
-        </a>
+        </div>
         
     </main>
+
+    <footer>
+        <p>© 2025 Panadería La Joya (Virtual)</p>
+        <p>Dirección: [Tu Dirección Completa Aquí], [Tu Ciudad]</p>
+        <p>Todos los pedidos son para recoger en tienda.</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="auth.js" defer></script>
 </body>
 </html>

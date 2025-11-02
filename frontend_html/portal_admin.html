@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Joya - Portal de Admin</title>
+    
+    <link rel="stylesheet" href="login.css"> <link rel="stylesheet" href="portal_trabajador.css">
+    <link rel="stylesheet" href="portal_admin.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h1 class="logo-small">
+            <a href="index.html">La Joya</a>
+        </h1>
+        <nav class="small-nav">
+            <ul>
+                <li class="login-item"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portal-container">
+        <nav class="admin-tabs">
+            <a href="#dashboard" class="admin-tab active" data-view="dashboard">Panel de Control</a>
+            <a href="#workers" class="admin-tab" data-view="workers">Gestionar Trabajadores</a>
+            <a href="#sales" class="admin-tab" data-view="sales">Reporte de Ventas</a>
+        </nav>
+
+        <div id="dashboard" class="admin-view active">
+            <h2>Panel de Control</h2>
+            <div class="dashboard-summary">
+                <div class="summary-box">
+                    <h4>Ventas de Hoy</h4>
+                    <span class="summary-value">$1,250.00</span>
+                </div>
+                <div class="summary-box">
+                    <h4>Pedidos Pendientes</h4>
+                    <span class="summary-value">3</span>
+                </div>
+                <div class="summary-box">
+                    <h4>Total de Trabajadores</h4>
+                    <span class="summary-value">2</span>
+                </div>
+            </div>
+            
+            <h3>Pedidos Recientes</h3>
+            <p>Aquí se mostrarán los últimos 5 pedidos.</p>
+        </div>
+
+        <div id="workers" class="admin-view hidden">
+            <h2>Gestionar Trabajadores</h2>
+            
+            <div class="worker-manager">
+                <div class="worker-form">
+                    <h3>Crear Nuevo Trabajador</h3>
+                    <form id="create-worker-form">
+                        <div class="input-group">
+                            <label for="worker-name">Nombre Completo</label>
+                            <input type="text" id="worker-name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="worker-email">Correo Electrónico</label>
+                            <input type="email" id="worker-email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="worker-pass">Contraseña Temporal</label>
+                            <input type="password" id="worker-pass" required>
+                        </div>
+                        <button type="submit" class="create-btn">Crear Cuenta</button>
+                    </form>
+                </div>
+
+                <div class="worker-list">
+                    <h3>Equipo Actual</h3>
+                    <div class="worker-item">
+                        <span>David (david@panaderia.com)</span>
+                        <button class="action-btn-admin delete">Eliminar</button>
+                    </div>
+                    <div class="worker-item">
+                        <span>Elena (elena@panaderia.com)</span>
+                        <button class="action-btn-admin delete">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sales" class="admin-view hidden">
+            <h2>Reporte de Ventas</h2>
+            
+            <div class="sales-summary">
+                <strong>Total de Ventas (Histórico): $3,480.00</strong>
+            </div>
+
+            <div class="order-list">
+                <div class="order-card completed">
+                    <div class="order-header">
+                        <h3>Pedido #LJ-1900</h3>
+                        <span>Cliente: <strong>(Cliente)</strong></span>
+                        <span>Total: <strong>$20.00</strong></span>
+                        <span class="order-status-admin completed">Recogido</span>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="order-header">
+                        <h3>Pedido #LJ-1901</h3>
+                        <span>Cliente: <strong>Osmar Arevalo</strong></span>
+                        <span>Total: <strong>$95.00</strong></span>
+                        <span class="order-status-admin pending">Pendiente</span>
+                    </div>
+                </div>
+                <div class="order-card">
+                    <div class="order-header">
+                        <h3>Pedido #LJ-1902</h3>
+                        <span>Cliente: <strong>Ana López</strong></span>
+                        <span>Total: <strong>$40.00</strong></span>
+                        <span class="order-status-admin pending">Pendiente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="auth.js" defer></script>
+    <script src="portal_admin.js" defer></script>
+</body>
+</html>

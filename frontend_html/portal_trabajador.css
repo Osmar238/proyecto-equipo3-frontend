@@ -1,0 +1,100 @@
+/* portal_trabajador.css */
+
+/* Contenedor Principal */
+.portal-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.portal-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Tarjeta de Pedido */
+.order-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden; /* Para que el borde redondeado se aplique bien */
+}
+
+/* Cabecera del Pedido (Resumen) */
+.order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+    flex-wrap: wrap; /* Para móviles */
+}
+
+.order-header h3 {
+    margin: 0;
+    font-size: 20px;
+    flex-basis: 150px; /* Espacio mínimo para el ID */
+}
+
+.order-info {
+    flex-grow: 1; /* Ocupa el espacio del medio */
+    display: flex;
+    flex-direction: column;
+}
+.order-info span {
+    font-size: 14px;
+}
+
+/* Botones de Acción */
+.view-details-btn, .complete-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-details-btn {
+    background-color: #e6e6e6; /* Gris de botones */
+    color: #333;
+}
+
+.complete-btn {
+    background-color: #007bff; /* Azul primario */
+    color: #fff;
+    border: 1px solid #0056b3;
+}
+
+/* Estado "Completado" */
+.order-card.completed {
+    background-color: #f9f9f9;
+    opacity: 0.7;
+}
+.order-card.completed .complete-btn {
+    background-color: #28a745; /* Verde */
+    border-color: #218838;
+}
+
+/* Detalles Ocultos */
+.order-details {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fafafa;
+}
+.order-details ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.order-details li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* Clase de JavaScript para ocultar/mostrar */
+.hidden {
+    display: none;
+}

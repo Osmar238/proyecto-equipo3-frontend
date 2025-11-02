@@ -160,8 +160,14 @@ body {
     line-height: 1;
 }
 
-.qty-btn.trash {
-    padding: 5px 8px;
+/* Estilo para el nuevo botón de eliminar */
+.action-btn.trash-btn {
+    font-size: 18px; /* Mismo tamaño que el corazón */
+    color: #d9534f; /* Un color rojo para "peligro" */
+}
+
+.action-btn.trash-btn:hover {
+    color: #c9302c; /* Rojo más oscuro al pasar el ratón */
 }
 
 .qty-display {
@@ -189,16 +195,18 @@ body {
 }
 
 .total-box {
-    font-size: 18px;
+    font-size: 24px;   /* <-- Aumentamos el tamaño de "Total" */
     font-weight: bold;
     color: #000;
-    padding: 5px 15px;
+    padding: 10px 20px; /* <-- Le dimos más espacio interior */
     background-color: #e6e6e6; 
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .total-amount {
-    color: #d9534f;
+    color: #d9534f;      /* Mantenemos el color rojo */
+    font-weight: 900;   /* <-- Hacemos el número súper grueso */
+    margin-left: 10px;  /* <-- Lo separamos un poco de la palabra "Total" */
 }
 
 .checkout-btn {
@@ -215,6 +223,59 @@ body {
 
 .checkout-btn:hover {
     background-color: #e0b0b0;
+}
+
+/* --- Estilo Global para Logos con Enlace --- */
+
+/* Quita el subrayado y da el color del texto del h1 */
+.logo a, .logo-small a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Hereda el color del padre (h1) */
+}
+
+/* --- Estilos Globales de Autenticación --- */
+.welcome-link {
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Se alinea bien con el botón */
+}
+/* Texto de saludo (¡Hola, Osmar!) */
+.welcome-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Estilo para el botón "Cerrar Sesión".
+  Queremos que se vea como los otros botones (INICIO, CARRITO)
+  de las barras pequeñas.
+*/
+#logout-button {
+    display: inline-block; /* Asegura que se alinee con el saludo */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d9534f; /* Rojo de "salir" */
+    border: 1px solid #d43f3a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1; /* Ajuste para centrado vertical */
+}
+
+#logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* En el index.html, los botones de nav son diferentes.
+  Ajustamos el saludo para que se alinee con el botón "Cerrar Sesión".
+*/
+.main-nav .welcome-text {
+    vertical-align: middle;
+}
+.main-nav #logout-button {
+    vertical-align: middle;
 }
 
 /* Media Query para móvil */

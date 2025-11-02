@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Joya - Carrito de Compras</title>
     <link rel="stylesheet" href="cart.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display.swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="top-bar">
-        <h1 class="logo-small">La Joya</h1>
+        <h1 class="logo-small">
+            <a href="index.html">La Joya</a>
+        </h1>
         <nav class="small-nav">
             <ul>
                 <li><a href="index.html" class="nav-item-small">INICIO</a></li>
@@ -25,124 +27,22 @@
     <main class="cart-container">
 
         <div class="cart-items-list">
-            
-            <div class="cart-item">
-                <div class="selection-status checked">✔</div>
-                <img src="muffin.jpg" alt="Muffin" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Muffin</p>
-                    <p class="item-price">$15</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">4</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
             </div>
-
-            <div class="cart-item">
-                <div class="selection-status unchecked">○</div>
-                <img src="dona-azucar.jpg" alt="Donas de azúcar" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Donas de azúcar</p>
-                    <p class="item-price">$10</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="selection-status checked">✔</div>
-                <img src="bisquet.jpg" alt="Bisquet" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Bisquet</p>
-                    <p class="item-price">$15</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
 
         <div class="vertical-separator"></div>
 
         <div class="cart-items-list">
-
-            <div class="cart-item">
-                <div class="selection-status checked">✔</div>
-                <img src="puerquito.jpg" alt="Puerquito" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Puerquito</p>
-                    <p class="item-price">$10</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
             </div>
-
-            <div class="cart-item">
-                <div class="selection-status checked">✔</div>
-                <img src="cuernito.jpg" alt="Cuernito" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Cuernito</p>
-                    <p class="item-price">$10</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">2</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart-item">
-                <div class="selection-status unchecked">○</div>
-                <img src="berlinas.jpg" alt="Berlinas" class="item-image">
-                <div class="item-details">
-                    <p class="item-name">Berlinas</p>
-                    <p class="item-price">$20</p>
-                </div>
-                <div class="item-actions">
-                    <button class="action-btn">♡</button>
-                    <div class="quantity-control">
-                        <button class="qty-btn trash">🗑</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn">+</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </main>
     
     <footer class="cart-footer">
         <div class="total-box">
-            Total <span class="total-amount">$105</span>
+            Total <span class="total-amount" id="cart-total-amount">$0.00</span>
         </div>
-        <a href="checkout_step1.html" class="checkout-btn">Finalizar compra</a>
+        <a href="checkout_step1.html" class="checkout-btn" id="checkout-button">Finalizar compra</a>
     </footer>
 
+    <script src="cart.js" defer></script>
+    <script src="auth.js" defer></script>
 </body>
 </html>

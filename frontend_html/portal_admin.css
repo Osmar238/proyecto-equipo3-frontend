@@ -1,0 +1,161 @@
+/* portal_admin.css */
+
+/* --- Pestañas de Navegación --- */
+.admin-tabs {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.admin-tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.admin-tab:hover {
+    background-color: #f0f0f0;
+}
+
+.admin-tab.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* --- Vistas de Contenido --- */
+.admin-view {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.admin-view.hidden {
+    display: none;
+}
+.admin-view h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* --- 1. Panel de Control --- */
+.dashboard-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.summary-box {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.summary-box h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+.summary-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* --- 2. Gestión de Trabajadores --- */
+.worker-manager {
+    display: flex;
+    gap: 30px;
+}
+.worker-form {
+    flex: 1;
+}
+.worker-list {
+    flex: 1;
+}
+.worker-form h3, .worker-list h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* (Reutilizamos .input-group de 'cuenta.css', así que no hay que re-definirlo) */
+
+.create-btn {
+    padding: 12px 30px;
+    background-color: #28a745; /* Verde */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.worker-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.action-btn-admin {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.action-btn-admin.delete {
+    color: #d9534f;
+}
+
+/* --- 3. Reporte de Ventas --- */
+.sales-summary {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f0c3c3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* Reutilizamos .order-list de portal_trabajador.css */
+.order-status-admin {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.order-status-admin.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+.order-status-admin.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .dashboard-summary {
+        flex-direction: column;
+    }
+    .worker-manager {
+        flex-direction: column;
+    }
+}

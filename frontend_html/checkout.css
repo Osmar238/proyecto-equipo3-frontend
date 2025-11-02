@@ -1,0 +1,129 @@
+/* checkout.css */
+
+.checkout-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Columna Izquierda (Formulario) */
+.checkout-form-column {
+    flex: 6; /* Ocupa 6 partes del espacio */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.checkout-form-column h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Hacemos que los campos se vean como en "Mi Cuenta" */
+.checkout-form-column .input-group {
+    margin-bottom: 20px;
+}
+
+/* Deshabilitamos los campos de nombre/email para que se vean grises */
+.checkout-form-column input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Estilo para el <select> */
+.checkout-form-column select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+/* Columna Derecha (Resumen) */
+.checkout-summary-column {
+    flex: 4; /* Ocupa 4 partes del espacio */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: fit-content; /* Se ajusta al contenido */
+}
+
+.checkout-summary-column h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Lista de productos en el resumen */
+#order-summary-list {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+#order-summary-list p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+}
+#order-summary-list p span {
+    font-weight: bold;
+}
+
+/* Total del Resumen */
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    border-top: 2px solid #ddd;
+    padding-top: 15px;
+}
+.summary-total #summary-total-amount {
+    color: #d9534f;
+}
+
+/* Sección de Pago */
+.payment-section {
+    margin-top: 30px;
+    text-align: center;
+}
+.payment-section h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Botón de Simulación */
+.sim-confirm-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Azul primario */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sim-confirm-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query para apilar columnas en móvil */
+@media (max-width: 900px) {
+    .checkout-container {
+        flex-direction: column;
+    }
+}

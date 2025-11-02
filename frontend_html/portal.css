@@ -1,0 +1,98 @@
+/* portal.css */
+
+/* Anula el 'text-align: left' de los inputs si existiera */
+.login-box {
+    text-align: center;
+}
+
+.login-box p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para los botones de rol */
+.portal-btn {
+    display: block; /* Uno encima del otro */
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Azul primario */
+    border-radius: 5px;
+    border: 2px solid #0056b3;
+    box-shadow: 0 2px 0 #0056b3;
+    text-transform: uppercase;
+    font-size: 16px;
+    box-sizing: border-box; /* Importante para el width 100% */
+    transition: background-color 0.3s;
+}
+
+.portal-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de admin (para diferenciarlo) */
+.portal-btn.btn-admin {
+    background-color: #5bc0de; /* Un azul 'info' */
+    border-color: #46b8da;
+    box-shadow: 0 2px 0 #46b8da;
+}
+
+.portal-btn.btn-admin:hover {
+    background-color: #31b0d5;
+}
+
+/* --- Estilo Global para Logos con Enlace --- */
+
+/* Quita el subrayado y da el color del texto del h1 */
+.logo a, .logo-small a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Hereda el color del padre (h1) */
+}
+
+/* --- Estilos Globales de Autenticación --- */
+.welcome-link {
+    text-decoration: none; /* Quita el subrayado */
+    display: inline-block; /* Se alinea bien con el botón */
+}
+/* Texto de saludo (¡Hola, Osmar!) */
+.welcome-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Estilo para el botón "Cerrar Sesión".
+  Queremos que se vea como los otros botones (INICIO, CARRITO)
+  de las barras pequeñas.
+*/
+#logout-button {
+    display: inline-block; /* Asegura que se alinee con el saludo */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d9534f; /* Rojo de "salir" */
+    border: 1px solid #d43f3a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1; /* Ajuste para centrado vertical */
+}
+
+#logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* En el index.html, los botones de nav son diferentes.
+  Ajustamos el saludo para que se alinee con el botón "Cerrar Sesión".
+*/
+.main-nav .welcome-text {
+    vertical-align: middle;
+}
+.main-nav #logout-button {
+    vertical-align: middle;
+}
