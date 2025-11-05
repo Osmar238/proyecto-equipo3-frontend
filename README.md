@@ -7,7 +7,7 @@ El objetivo es crear un sitio web funcional para una panadería, que sirva como 
 
 ## Integrantes (Grupo 3)
 * Arevalo Molina Osmar
-* Cabrera García Ismael
+* CABRERA GARCIA ISMAEL
 * Dana Hernandez Santos
 
 ## Plantilla Usada
